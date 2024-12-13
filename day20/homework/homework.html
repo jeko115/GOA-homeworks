@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While Loop</title>
+</head>
+<body>
+
+    <h2>რიცხვები 10-დან 1-მდე</h2>
+    <ul>
+        <script>
+            let i = 10;
+            while (i >= 1) {
+                document.write(`<li>${i}</li>`);
+                i--;
+            }
+        </script>
+    </ul>
+
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excluding Numbers</title>
+</head>
+<body>
+
+    <h2>რიცხვები 20-მდე გამოკლებული 5 და 15</h2>
+    <ul>
+        <script>
+            for (let i = 1; i <= 20; i++) {
+                if (i !== 5 && i !== 15) {
+                    document.write(`<li>${i}</li>`);
+                }
+            }
+        </script>
+    </ul>
+
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Letters</title>
+</head>
+<body>
+
+    <h2>სიტყვა და მისი ასოები</h2>
+    <ul>
+        <script>
+            let word = "გიორგი";  // შეცვალეთ სიტყვა აქ
+            for (let i = 0; i < word.length; i++) {
+                document.write(`<li>${word[i]}</li>`);
+            }
+        </script>
+    </ul>
+
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Statement</title>
+</head>
+<body>
+
+    <h2>ლუწი და კენტი ციკლებით</h2>
+    <ul>
+        <script>
+            for (let i = 1; i <= 10; i++) {
+                if (i % 2 === 0) {
+                    document.write(`<li>მე მიყვარს გოა - ${i}</li>`);
+                } else {
+                    document.write(`<li>მე მიყვარს პროგრამირება - ${i}</li>`);
+                }
+            }
+        </script>
+    </ul>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ლუწი და კენტი რიცხვები</title>
+</head>
+<body>
+
+    <h2>რიცხვები 1-დან 30-მდე</h2>
+    <ul>
+        <script>
+            for (let i = 1; i <= 30; i++) {
+                if (i % 2 === 0) {
+                    document.write(`<li>${i} - ლუწია</li>`);
+                } else {
+                    document.write(`<li>${i} - კენტია</li>`);
+                }
+            }
+        </script>
+    </ul>
+
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>უკუღმა რიცხვები</title>
+</head>
+<body>
+
+    <h2>1-დან 10-მდე რიცხვები უკუღმა</h2>
+    <ul>
+        <script>
+            for (let i = 10; i >= 1; i--) {
+                document.write(`<li>${i}</li>`);
+            }
+        </script>
+    </ul>
+
+</body>
+</html>

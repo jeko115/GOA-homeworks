@@ -23,7 +23,7 @@ left(90)
 #drawing a door
 
 forward(70)
-color("yellow")
+color("blue")
 left(90)
 forward(120)
 right(90)
