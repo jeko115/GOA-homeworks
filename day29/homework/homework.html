@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ჩემი საიტი</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        .section {
+            margin: 20px;
+        }
+        iframe, video {
+            width: 100%;
+            max-width: 600px;
+            margin: 10px 0;
+        }
+        .gallery img {
+            width: 300px;
+            height: auto;
+            margin: 15px;
+        }
+        .car-gallery img {
+            width: 300px;
+            margin: 15px;
+        }
+        h2 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>ჩემი მრავალგვერდიანი საიტი</h1>
+</header>
+
+<!-- 1. ორი გადმოწერილი ვიდეო -->
+<section class="section">
+    <h2>ჩემი ორი გადმოწერილი ვიდეო</h2>
+    <div>
+        <video controls>
+            <source src="video1.mp4" type="video/mp4">
+            თქვენი ბრაუზერი არ უჭერს მხარს ვიდეოს ფორმატს.
+        </video>
+    </div>
+    <div>
+        <video controls>
+            <source src="video2.mp4" type="video/mp4">
+            თქვენი ბრაუზერი არ უჭერს მხარს ვიდეოს ფორმატს.
+        </video>
+    </div>
+</section>
+
+<!-- 2. ორი ვიდეო იუთუბიდან -->
+<section class="section">
+    <h2>ორი ვიდეო იუთუბიდან</h2>
+    <div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+</section>
+
+<!-- 3. გოას გალერეა -->
+<section class="section gallery">
+    <h2>Goa Gallery</h2>
+    <div>
+        <img src="goa1.jpg" alt="Goa Beach 1">
+        <img src="goa2.jpg" alt="Goa Beach 2">
+        <img src="goa3.jpg" alt="Goa Beach 3">
+    </div>
+    <div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+</section>
+
+<!-- 4. მანქანის აღწერა, ფოტოები და ვიდეო -->
+<section class="section">
+    <h2>BMW 3 Series</h2>
+    <p>The BMW 3 Series is a compact executive car manufactured by BMW. It is one of the best-selling luxury cars in the world, known for its performance and comfort.</p>
+    <div class="car-gallery">
+        <img src="bmw1.jpg" alt="BMW 3 Series 1">
+        <img src="bmw2.jpg" alt="BMW 3 Series 2">
+    </div>
+    <div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+</section>
+
+<!-- 5. იუთუბიდან 5 ვიდეო, ზომების ცვლილებით -->
+<section class="section">
+    <h2>5 ვიდეო იუთუბიდან (ზომებით)</h2>
+    <div>
+        <iframe width="320" height="180" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="400" height="225" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="480" height="270" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="640" height="360" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+</section>
+
+</body>
+</html>
+
