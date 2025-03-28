@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>რეგისტრაცია და ავტორიზაცია</title>
+</head>
+<body>
+    <h2>რეგისტრაცია</h2>
+    <form id="registration-form">
+        <label for="reg-username">სახელი:</label>
+        <input type="text" id="reg-username" placeholder="შეიყვანეთ სახელი" required>
+        <br><br>
+        <label for="reg-password">პაროლი:</label>
+        <input type="password" id="reg-password" placeholder="შეიყვანეთ პაროლი" required>
+        <br><br>
+        <button type="submit">რეგისტრაცია</button>
+    </form>
+
+    <h2>შესვლა</h2>
+    <form id="login-form" style="display:none;">
+        <label for="login-username">სახელი:</label>
+        <input type="text" id="login-username" placeholder="შეიყვანეთ სახელი" required>
+        <br><br>
+        <label for="login-password">პაროლი:</label>
+        <input type="password" id="login-password" placeholder="შეიყვანეთ პაროლი" required>
+        <br><br>
+        <button type="submit">შესვლა</button>
+    </form>
+
+    <p id="message"></p>
+
+    <script>
+        // მომხმარებლის მონაცემები
+        let registeredUsername = '';
+        let registeredPassword = '';
+
+        // რეგისტრაციის ფორმა
+        const registrationForm = document.getElementById('registration-form');
+        registrationForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // ფორმის ავტომატური გაგზავნის თავიდან აცილება
+
+            // მონაცემების შენახვა
+            registeredUsername = document.getElementById('reg-username').value;
+            registeredPassword = document.getElementById('reg-password').value;
+
+            // შეტყობინების გამოჩენა
+            document.getElementById('message').textContent = 'რეგისტრაცია წარმატებით დასრულდა! ახლა შეგიძლიათ შეხვიდეთ.';
+            
+            // რეგისტრაციის ფორმის დამალვა და შესვლის ფორმის გამოჩენა
+            registrationForm.style.display = 'none';
+            document.getElementById('login-form').style.display = 'block';
+        });
+
+        // შესვლის ფორმა
+        const loginForm = document.getElementById('login-form');
+        loginForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const loginUsername = document.getElementById('login-username').value;
+            const loginPassword = document.getElementById('login-password').value;
+
+            // შემოწმება
+            if (loginUsername === registeredUsername && loginPassword === registeredPassword) {
+                document.getElementById('message').textContent = 'Welcome!';
+                loginForm.style.display = 'none';
+            } else {
+                document.getElementById('message').textContent = 'შეტანილი ინფორმაცია არასწორია, სცადეთ თავიდან.';
+            }
+        });
+    </script>
+</body>
+</html>
