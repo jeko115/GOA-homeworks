@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Huddle Landing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="huddle">
+    <header class="huddle-header">
+      <img src="logo.svg" alt="Huddle Logo">
+    </header>
+
+    <section class="intro">
+      <h1>Build The Community Your Fans Will Love</h1>
+      <p>Huddle re-images the way we build communities. You have a voice, but so does your audience. Create connections with your users as you engage in genuine discussion.</p>
+      <a href="#" class="btn">Get Started For Free</a>
+    </section>
+
+    <div class="huddle-image">
+      <img src="intro-mobile.png" alt="People chatting">
+    </div>
+
+    <footer class="attribution">
+      Challenge by Frontend Mentor. Coded by YOU.
+    </footer>
+  </main>
+</body>
+</html>
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Poppins', sans-serif;
+  background: hsl(257, 40%, 49%);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.huddle {
+  background: hsl(300, 24%, 96%);
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 375px;
+  text-align: center;
+}
+
+.huddle-header {
+  background: hsl(257, 40%, 49%);
+  padding: 2rem;
+}
+
+.huddle-header img {
+  max-width: 150px;
+}
+
+.intro {
+  padding: 2rem;
+}
+
+.intro h1 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: hsl(257, 40%, 49%);
+}
+
+.intro p {
+  color: hsl(257, 40%, 49%, 0.75);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.btn {
+  background: hsl(300, 69%, 71%);
+  color: hsl(257, 40%, 49%);
+  padding: 0.75rem 2rem;
+  border-radius: 25px;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.huddle-image img {
+  width: 100%;
+  display: block;
+}
+
+@media(min-width: 768px) {
+  .huddle {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 900px;
+  }
+
+  .huddle-header,
+  .huddle-image {
+    grid-column: span 2;
+  }
+
+  .intro {
+    padding: 4rem;
+    text-align: left;
+  }
+}

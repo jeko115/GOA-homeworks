@@ -1,0 +1,61 @@
+<div class="features">
+  <div class="card">
+    <img src="icon1.svg" alt="Icon 1" />
+    <h3>Declarative</h3>
+    <p>React makes it painless to create interactive UIs.</p>
+  </div>
+  <div class="card">
+    <img src="icon2.svg" alt="Icon 2" />
+    <h3>Components</h3>
+    <p>Build encapsulated components that manage their state.</p>
+  </div>
+  <div class="card">
+    <img src="icon3.svg" alt="Icon 3" />
+    <h3>Single-Way</h3>
+    <p>A set of immutable values are passed to the components.</p>
+  </div>
+  <div class="card">
+    <img src="icon4.svg" alt="Icon 4" />
+    <h3>JSX</h3>
+    <p>Statically-typed, designed to run on modern browsers.</p>
+  </div>
+</div>
+.features {
+  display: flex;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  justify-content: space-between;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  text-align: center;
+  flex: 1 1 200px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card img {
+  width: 60px;
+  margin-bottom: 20px;
+}
+
+.card h3 {
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.card p {
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.4;
+}
