@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Text Underline & Click Effects</title>
+<style>
+  
+  p {
+    font-size: 24px;
+    margin: 40px;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  
+  #text1 {
+    position: relative;
+  }
+  
+  #text1:hover:not(.clicked) {
+    text-decoration: underline;
+    text-decoration-color: black;
+    text-decoration-thickness: 2px;
+  }
+  
+  #text1.clicked {
+    text-decoration: underline;
+    text-decoration-color: red;
+    text-decoration-thickness: 2px;
+  }
+
+  
+  #text2 {
+    position: relative;
+  }
+  
+  #text2:hover:not(.clicked) {
+    text-decoration-line: overline underline;
+    text-decoration-color: black;
+    text-decoration-thickness: 2px;
+  }
+  
+  #text2.clicked {
+    text-decoration-line: overline underline line-through;
+    text-decoration-color: blue;
+    text-decoration-thickness: 2px;
+  }
+</style>
+</head>
+<body>
+
+<p id="text1">ტექსტი 1 — საშუალო ხაზი მაუსის მიტანისას და წითელი დაკლიკებისას</p>
+<p id="text2">ტექსტი 2 — ზემოდან და ქვემოდან ხაზი მაუსის მიტანისას და ლურჯი ყველა ხაზის დაკლიკებისას</p>
+
+<script>
+  
+  document.getElementById('text1').addEventListener('click', function() {
+    this.classList.toggle('clicked');
+  });
+
+  document.getElementById('text2').addEventListener('click', function() {
+    this.classList.toggle('clicked');
+  });
+</script>
+
+</body>
+</html>
