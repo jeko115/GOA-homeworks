@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Results Summary Component</title>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="summary-card">
+    <section class="summary-panel">
+      <h2>Your Result</h2>
+      <div class="score-circle">
+        <span class="score-number">76</span>
+        <span class="score-max">of 100</span>
+      </div>
+      <div class="rating">
+        <strong>Great</strong>
+        <p>You scored higher than 65% of the people who have taken these tests.</p>
+      </div>
+    </section>
+
+    <section class="details-panel">
+      <h3>Summary</h3>
+      <ul class="categories">
+        <li class="category reaction">
+          <div class="cat-info">
+            <img src="images/icon-reaction.svg" alt="Reaction Icon">
+            <span>Reaction</span>
+          </div>
+          <span class="cat-score"><strong>80 </strong> / 100</span>
+        </li>
+        <li class="category memory">
+          <div class="cat-info">
+            <img src="images/icon-memory.svg" alt="Memory Icon">
+            <span>Memory</span>
+          </div>
+          <span class="cat-score"><strong>92 </strong> / 100</span>
+        </li>
+        <li class="category verbal">
+          <div class="cat-info">
+            <img src="images/icon-verbal.svg" alt="Verbal Icon">
+            <span>Verbal</span>
+          </div>
+          <span class="cat-score"><strong>61 </strong> / 100</span>
+        </li>
+        <li class="category visual">
+          <div class="cat-info">
+            <img src="images/icon-visual.svg" alt="Visual Icon">
+            <span>Visual</span>
+          </div>
+          <span class="cat-score"><strong>72 </strong> / 100</span>
+        </li>
+      </ul>
+
+      <button class="btn">Continue</button>
+    </section>
+  </main>
+</body>
+</html>
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Hanken Grotesk', sans-serif;
+  background: hsl(210, 60%, 98%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.summary-card {
+  background: white;
+  border-radius: 15px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  width: 320px;
+  box-shadow: 0 20px 30px hsla(224, 30%, 4%, 0.1);
+  overflow: hidden;
+}
+
+/* Left panel */
+.summary-panel {
+  background: hsl(252, 100%, 67%);
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+.summary-panel h2 {
+  font-size: 1rem;
+  opacity: 0.75;
+  margin-bottom: 1.5rem;
+}
+.score-circle {
+  background: hsl(255, 24%, 17%);
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin: 0 auto 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.score-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.score-max {
+  font-size: 0.875rem;
+  opacity: 0.75;
+}
+.rating strong {
+  font-size: 1.5rem;
+}
+.rating p {
+  font-size: 0.875rem;
+  opacity: 0.75;
+  margin-top: 0.5rem;
+}
+
+/* Right panel */
+.details-panel {
+  padding: 2rem;
+}
+.details-panel h3 {
+  font-size: 1.125rem;
+  margin-bottom: 1.5rem;
+}
+.categories {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.category {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+}
+.cat-info {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+.cat-score {
+  font-weight: 700;
+}
+
+/* Category Colors */
+.reaction { background: hsl(0, 100%, 67%, 0.1); color: hsl(0, 100%, 67%); }
+.memory { background: hsl(39, 100%, 56%, 0.1); color: hsl(39, 100%, 56%); }
+.verbal { background: hsl(166, 100%, 37%, 0.1); color: hsl(166, 100%, 37%); }
+.visual { background: hsl(234, 85%, 45%, 0.1); color: hsl(234, 85%, 45%); }
+
+/* Button */
+.btn {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 25px;
+  background: hsl(224, 30%, 27%);
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.btn:hover {
+  background: hsl(224, 30%, 17%);
+}
+
+/* Responsive */
+@media(min-width: 768px) {
+  .summary-card {
+    width: 600px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: none;
+  }
+  .summary-panel,
+  .details-panel {
+    padding: 3rem;
+    text-align: left;
+  }
+  .summary-panel h2 {
+    opacity: 1;
+  }
+}
