@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Testimonials Grid</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<main class="testimonials-section">
+  <h1>Client testimonials</h1>
+  <div class="testimonials-grid">
+    <article class="testimonial testimonial1">
+      <p>“We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.”</p>
+      <div class="author">
+        <img src="images/image-emily.jpg" alt="Emily" />
+        <div>
+          <h4>Emily R.</h4>
+          <span>Marketing Director</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="testimonial testimonial2">
+      <p>“Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.”</p>
+      <div class="author">
+        <img src="images/image-thomas.jpg" alt="Thomas" />
+        <div>
+          <h4>Thomas S.</h4>
+          <span>Chief Operating Officer</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="testimonial testimonial3">
+      <p>“Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!”</p>
+      <div class="author">
+        <img src="images/image-jennie.jpg" alt="Jennie" />
+        <div>
+          <h4>Jennie F.</h4>
+          <span>Business Owner</span>
+        </div>
+      </div>
+    </article>
+  </div>
+</main>
+
+</body>
+</html>
+/* Reset & base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Inter', sans-serif;
+  background: hsl(0, 0%, 98%);
+  color: hsl(210, 10%, 33%);
+  padding: 2rem;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* მთავარი კონტეინერი */
+.testimonials-section {
+  max-width: 900px;
+  width: 100%;
+}
+
+/* სათაური */
+.testimonials-section > h1 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: hsl(210, 10%, 33%);
+}
+
+/* გრიდ კონტეინერი */
+.testimonials-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+}
+
+/* ტესტიმონი ბლოკი */
+.testimonial {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 15px rgb(0 0 0 / 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* ტექსტი */
+.testimonial p {
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  color: hsl(210, 10%, 43%);
+}
+
+/* ავტორი */
+.author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.author img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid hsl(252, 94%, 67%);
+}
+.author h4 {
+  font-weight: 700;
+  color: hsl(210, 10%, 33%);
+}
+.author span {
+  font-size: 0.9rem;
+  color: hsl(210, 10%, 63%);
+}
+
+/* Responsive: მაგიდაზე 3 სვეტი */
+@media(min-width: 700px) {
+  .testimonials-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
