@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Practice</title>
+  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* 1) დიდი მწვანე დივი */
+    .green-box {
+      width: 100%;
+      height: 400px;
+      background-color: green;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .green-box p {
+      font-family: 'Indie Flower', cursive;
+      text-decoration: underline dotted violet;
+    }
+
+    .green-box button {
+      background-color: blue;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* 2) წითელი დივი სამი პარაგრაფით და h1-ით */
+    .red-box {
+      width: 100%;
+      height: auto;
+      background-color: red;
+      padding: 20px;
+    }
+
+    .red-box h1, .red-box p {
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    /* 3) მწვანე დივი — 3 პარაგრაფი, ერთი გამორჩეული */
+    .three-para-box {
+      width: 100%;
+      height: auto;
+      background-color: green;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      padding: 20px;
+    }
+
+    .three-para-box p {
+      color: blue;
+      text-decoration: overline solid violet;
+    }
+
+    .three-para-box .highlight {
+      color: yellow;
+      font-size: 28px;
+      font-weight: 800;
+      text-decoration: overline solid violet underline wavy black;
+    }
+
+    /* 4) ორი დივი ლურჯში */
+    .big-blue-box {
+      width: 100%;
+      height: 300px;
+      background-color: blue;
+      display: flex;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .small-box1 {
+      width: 50%;
+      height: 100%;
+      background-color: lightgreen;
+    }
+
+    .small-box2 {
+      width: 50%;
+      height: 100%;
+      background-color: lightcoral;
+    }
+
+    /* 5) დიდი წითელი დივი და 5 პატარა დივი */
+    .red-parent {
+      width: 100%;
+      height: auto;
+      background-color: red;
+      padding: 20px;
+      display: flex;
+      gap: 15px;
+    }
+
+    .child-box {
+      width: 100px;
+      height: 100px;
+      background-color: blue;
+    }
+
+    .child-box.green {
+      background-color: green;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      padding: 5px;
+    }
+
+    .child-box.green p {
+      color: violet;
+      font-size: 12px;
+    }
+
+    /* 6) კომენტარები ქვემოთ */
+  </style>
+</head>
+<body>
+
+  <!-- 1) მწვანე დივი -->
+  <div class="green-box">
+    <img src="https://via.placeholder.com/100" alt="Placeholder Image">
+    <p>ეს არის პარაგრაფი</p>
+    <button>დაკლიკე</button>
+  </div>
+
+  <!-- 2) წითელი დივი -->
+  <div class="red-box">
+    <h1>სათაური</h1>
+    <p>ეს არის ტექსტი</p>
+    <h1>სათაური</h1>
+    <p>ეს არის ტექსტი</p>
+    <h1>სათაური</h1>
+    <p>ეს არის ტექსტი</p>
+  </div>
+
+  <!-- 3) მწვანე დივი 3 პარაგრაფით -->
+  <div class="three-para-box">
+    <p>პარაგრაფი 1</p>
+    <p class="highlight">გამორჩეული პარაგრაფი</p>
+    <p>პარაგრაფი 3</p>
+  </div>
+
+  <!-- 4) დიდი ლურჯი დივი ორით შიგნით -->
+  <div class="big-blue-box">
+    <div class="small-box1"></div>
+    <div class="small-box2"></div>
+  </div>
+
+  <!-- 5) წითელი დივი 5 პატარა დივით -->
+  <div class="red-parent">
+    <div class="child-box"></div>
+    <div class="child-box green">
+      <p>პ1</p>
+      <p>პ2</p>
+      <p>პ3</p>
+      <p>პ4</p>
+    </div>
+    <div class="child-box"></div>
+    <div class="child-box"></div>
+    <div class="child-box"></div>
+  </div>
+
+  <!-- 6) კომენტარები -->
+  <!-- 
+    ✅ Inline ელემენტები — ეს არის ელემენტები, რომლებიც არ იკავებენ მთელ სიგანეს (მაგ: <span>, <a>, <strong>)
+    ✅ Block-level ელემენტები — ეს არის ელემენტები, რომლებიც იკავებენ მთელ ხაზს (მაგ: <div>, <p>, <h1>)
+
+    ✅ <div> — ბლოკური ელემენტია. მისი დახმარებით ვყოფთ გვერდს სექციებად და ვფორმატავთ დიზაინს. 
+       div საშუალებას გვაძლევს დავაჯგუფოთ ელემენტები ერთად და მივანიჭოთ ერთიანი სტილები.
+  -->
+
+</body>
+</html>
