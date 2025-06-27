@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Pulse Animation</title>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    margin: 0;
+  }
+
+  .pulse-ball {
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle at center, #ff6a00, #ee0979);
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(238, 9, 121, 0.7);
+    animation: pulse 2s infinite ease-in-out;
+  }
+
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+      box-shadow: 0 0 20px rgba(238, 9, 121, 0.7);
+    }
+    50% {
+      transform: scale(1.3);
+      box-shadow: 0 0 40px rgba(238, 9, 121, 1);
+    }
+  }
+</style>
+</head>
+<body>
+
+  <div class="pulse-ball"></div>
+
+</body>
+</html>
