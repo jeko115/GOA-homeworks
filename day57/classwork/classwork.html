@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Buttons with Hover</title>
+  <style>
+    /* საერთო ღილაკის სტილი */
+    button {
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      margin: 10px;
+      transition: all 0.3s ease;
+    }
+
+    /* პირველი ღილაკი */
+    #btn1 {
+      background-color: #3498db;
+      color: white;
+    }
+
+    #btn1:hover {
+      background-color: #2980b9; /* მუქი ლურჯი */
+      transform: scale(1.1);     /* ოდნავ იზრდება */
+    }
+
+    /* მეორე ღილაკი */
+    #btn2 {
+      background-color: #2ecc71;
+      color: white;
+    }
+
+    #btn2:hover {
+      background-color: #27ae60;
+      transform: rotate(3deg);   /* ოდნავი დახრა hover-ზე */
+    }
+
+    /* მესამე ღილაკი */
+    #btn3 {
+      background-color: white;
+      color: #e74c3c;
+      border: 2px solid #e74c3c;
+    }
+
+    #btn3:hover {
+      background-color: #e74c3c;
+      color: white;
+      box-shadow: 0 0 10px rgba(231, 76, 60, 0.5);
+    }
+  </style>
+</head>
+<body>
+
+  <button id="btn1">ლურჯი ღილაკი</button>
+  <button id="btn2">მწვანე ღილაკი</button>
+  <button id="btn3">მინიმალისტური ღილაკი</button>
+
+</body>
+</html>

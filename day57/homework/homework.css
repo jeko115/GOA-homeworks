@@ -1,0 +1,14 @@
+button:hover {
+    background-color: blue; /* ღილაკის ფერი შეიცვლება ლურჯად */
+    color: white;           /* ტექსტი გათეთრდება */
+}
+
+button:active {
+    background-color: darkblue; /* ღილაკის ფერი კიდევ უფრო მუქი ხდება დაჭერისას */
+}
+
+input:focus {
+    border-color: green;          /* რჩება მწვანე ზღვარი */
+    outline: none;                /* ქრება ბრაუზერის სტანდარტული ფოკუსი */
+    box-shadow: 0 0 5px green;   /* იჩენს მწვანე ჩრდილს */
+}
