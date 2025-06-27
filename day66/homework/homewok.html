@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Styled Table</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f3f3f3;
+      margin: 0;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 600px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    thead {
+      background-color: #009879;
+      color: white;
+    }
+
+    th, td {
+      padding: 16px 20px;
+      text-align: left;
+    }
+
+    tbody tr {
+      background-color: white;
+      transition: background-color 0.3s;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    tbody tr:nth-child(2) {
+      background-color: #eeeeee;
+      font-weight: bold;
+      color: #009879;
+    }
+
+    tbody tr:hover {
+      background-color: #d6f5f1;
+    }
+
+    td, th {
+      font-size: 16px;
+    }
+
+    th:first-child {
+      border-top-left-radius: 10px;
+    }
+
+    th:last-child {
+      border-top-right-radius: 10px;
+    }
+
+    tbody tr:last-child td:first-child {
+      border-bottom-left-radius: 10px;
+    }
+
+    tbody tr:last-child td:last-child {
+      border-bottom-right-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Rank</th>
+        <th>Name</th>
+        <th>Points</th>
+        <th>Team</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Domenic</td>
+        <td>88,110</td>
+        <td>dcode</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Sally</td>
+        <td>72,400</td>
+        <td>Students</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Nick</td>
+        <td>52,300</td>
+        <td>dcode</td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+</html>
+
+
+<!-- 
+<table> — ცხრილის შესაქმნელად მთავარი კონტეინერია. 
+          მასში თავსდება მთელი ცხრილის სტრუქტურა.
+
+<thead> — ცხრილის ზედა ნაწილი, რომელიც ძირითადად შეიცავს სათაურის რიგს.
+
+<tbody> — ცხრილის მთავარი შინაარსი, ანუ მონაცემების რიგები.
+
+<tr> — ნიშნავს "Table Row" ანუ ცხრილის ერთი რიგი.
+
+<th> — "Table Header" — გამოიყენება სათაურის უჯრებისთვის, 
+       ავტომატურად არის bold და ცენტრში არის ტექსტი.
+
+<td> — "Table Data" — ცხრილის მონაცემის უჯრა. 
+       გამოიყენება <tbody> შიგნით, <tr>-ის შიგნით.
+
+<tfoot> — (არ არის სავალდებულო) — გამოიყენება ცხრილის ქვედა 
+         დასკვნითი ნაწილისთვის, როგორიცაა ჯამები, შეჯამება და ა.შ.
+-->
